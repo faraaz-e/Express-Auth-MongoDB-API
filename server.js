@@ -8,6 +8,7 @@ const app = express();
 
 app.use(express.json()); //middleware to parse incoming request via request body (eg.bodyParser)
 app.use("/api/v1/contacts", require("./routes/contactRoutes"));
+app.use("/api/v1/users", require("./routes/userRoutes"));
 app.use(errorHandler);
 
 const port = process.env.PORT || 5000;
